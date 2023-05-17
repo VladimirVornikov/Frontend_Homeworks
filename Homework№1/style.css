@@ -1,0 +1,17 @@
+
+.main {
+    background-color: #dbd5d5;
+    padding: 21px;
+    border-radius: 0px;
+
+}
+
+div {
+    background-color: #34495E;
+    border-radius: 20px;
+}
+
+p {
+    color: rgb(236, 231, 231);
+    padding: 21px;
+}
