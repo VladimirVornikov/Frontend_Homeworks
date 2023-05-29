@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: grey;
+}
+section {
+  background-color: white;
+  border-radius: 20px;
+  width: 420px;
+  height: 426px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Cross {
+  width: 388px;
+  height: 24px;
+  display: inline-flex;
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+img {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+h3 {
+  width: 356px;
+  height: 32px;
+  font-weight: 800;
+  font-size: 28px;
+  font-family: "Nunito";
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 24px;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 356px;
+  height: 104px;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 24px;
+  justify-content: space-between;
+}
+.login {
+  width: 356px;
+  height: 48px;
+  border: 1px solid #ffe44d;
+  border-radius: 12px;
+  padding-left: 16px;
+  padding-top: 21px;
+  padding-bottom: 7px;
+  caret-color: yellow;
+}
+
+.password {
+  width: 356px;
+  height: 48px;
+  border: 1px solid #cfd8dc;
+  border-radius: 12px;
+  padding-left: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+p {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #7b8e98;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 24px;
+  width: 356px;
+  height: 42px;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+}
+
+.registration {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 8px;
+  width: 356px;
+  height: 48px;
+  background-color: #ffe44d;
+  border: 1px solid white;
+  border-radius: 55px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.entry {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 32px;
+  width: 356px;
+  height: 48px;
+  border: 1px solid #cfd8dc;
+  border-radius: 87px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: white;
+}
