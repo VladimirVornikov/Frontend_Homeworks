@@ -6,3 +6,4 @@ Links:
 [Homework№4](https://vladimirvornikov.github.io/Frontend_Homeworks/Homework%E2%84%964/index.html)
 [Homework№5](https://github.com/VladimirVornikov/Frontend_Homeworks/blob/main/Homework%E2%84%965/script.js)
 [Homework№6](https://github.com/VladimirVornikov/Frontend_Homeworks/blob/main/Homework%E2%84%966/script.js)
+[Homework№7](https://github.com/VladimirVornikov/Frontend_Homeworks/blob/main/Homework%E2%84%967/script.js)
