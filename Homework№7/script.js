@@ -51,7 +51,7 @@ SumOfOddAndEven(2, 5)
 // Пример: [ 'one', 'two', 'three' ] => 'three'
 
 function firstLongestElement(array) {
-  let theLongestElement = [];
+  let theLongestElement = "";
   if (array.length != 0) {
     for (let i = 0; i < array.length; i++) {
       if (array[i].length > theLongestElement.length) {
