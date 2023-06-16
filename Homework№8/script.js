@@ -1,11 +1,13 @@
 //1. Написать цикл, который создает множество параграфов с каждым десятым числом в промежутке от 100 до 50
 // (т.е. 100, 90, 80, 70, 60, 50). Добавить созданные параграфы в div с классом numbers.
 
+
 function createNewParagraph() {
   const body1 = document.querySelector("body");
   body1.innerHTML = "<div class='numbers'>";
+  const p1 = document.querySelector(".numbers")
   for (i = 100; i >= 50; i -= 10) {
-    body1.innerHTML += `<p> ${i} </p>`;
+    p1.innerHTML += `<p> ${i} </p>`;
   }
 }
 createNewParagraph();
@@ -15,8 +17,9 @@ createNewParagraph();
 function loopForArray(countries) {
   const body2 = document.querySelector("body");
   body2.innerHTML += "<div class='strings_container'>";
+  const p2 = document.querySelector(".strings_container")
   for (i = 0; i < countries.length; i++) {
-    body2.innerHTML += `<p> ${countries[i]} </p>`;
+    p2.innerHTML += `<p> ${countries[i]} </p>`;
   }
 }
 loopForArray(["Great Britain", "Germany", "Russia", "France", "Spain"]);
@@ -50,10 +53,11 @@ function onlyAdults() {
   ];
   const body3 = document.querySelector("body");
   body3.innerHTML += "<div class='users_container'>";
-  body3.style.backgroundColor = ""
+  const p3 = document.querySelector(".users_container");
+  p3.style.backgroundColor = "green";
   for (i = 0; i < usersInfo.length; i++) {
     if (usersInfo[i].age >= 18) {
-      body3.innerHTML += `<h3> ${usersInfo[i].first_name} </h3> 
+      p3.innerHTML += `<h3> ${usersInfo[i].first_name} </h3> 
       <h3> ${usersInfo[i].last_name} </h3>
       <p> ${usersInfo[i].age} </p>`;
     }
