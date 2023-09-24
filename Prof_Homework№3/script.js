@@ -61,62 +61,48 @@ div_root.className = "root";
 document.body.prepend(div_root);
 
 // Создание формы для заполнения
-const div_form = document.createElement("div");
-div_form.className = "form";
+const div_form = document.createElement("form");
 
 // Создание инпутов и сабмита
 const newName = document.createElement("input");
 newName.placeholder = "New user's name";
 newName.type = "text";
-newName.id = "input";
-newName.name = "name";
+newName.name = "name"
 
 const newSalary = document.createElement("input");
 newSalary.placeholder = "Which salary do they want to?";
 newSalary.type = "number";
-newSalary.id = "input";
-newSalary.name = "salary"
+newSalary.name = "salary";
+
 
 const submit = document.createElement("button");
 submit.innerText = "Add new user";
-submit.className = "submit";
 submit.type = "submit";
 // Добавление всего в форму и в root
 div_form.append(newName, newSalary, submit);
 document.body.prepend(div_form);
 
 div_form.addEventListener("submit", (event) => {
+  console.log(event.target);
   event.preventDefault(); // Запрещаем обновление страницы после отправки формы
 
-  const nameInput = document.querySelector('input[name="name"]');
-  const salaryInput = document.querySelector('input[name="salary"]');
+  const {name, salary} = event.target;
 
-  // Валидация полей
-  const name = nameInput.value.trim();
-  const salary = parseFloat(salaryInput.value);
-
-  if (name === "" || isNaN(salary)) {
-    alert("Введите корректные данные.");
-    return;
-  }
-
-  const new_user = {
+  const newUser = {
     id: Date.now(),
-    name: name,
-    image: "https://picsum.photos/200",
-    salary: salary
+    name: name.value,
+    image: 'https://picsum.photos/200',
+    salary: salary.value
   };
 
   // Добавление пользователя в массив
-  names.push(new_user);
+  names.push(newUser);
 
   render(names);
 
-  // Очистка инпутов
-  nameInput.value = "";
-  salaryInput.value = "";
 });
 
+// //Функция добавления нового пользователя в массив
 
 // Написание функции, которая будет создавать блоки и теги из списка(массива)
 function render(array) {
