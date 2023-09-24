@@ -67,17 +67,33 @@ const div_form = document.createElement("form");
 const newName = document.createElement("input");
 newName.placeholder = "New user's name";
 newName.type = "text";
-newName.name = "name"
+newName.name = "name";
 
 const newSalary = document.createElement("input");
 newSalary.placeholder = "Which salary do they want to?";
 newSalary.type = "number";
 newSalary.name = "salary";
 
-
 const submit = document.createElement("button");
 submit.innerText = "Add new user";
 submit.type = "submit";
+
+function saveLocalStorage(array) {
+  localStorage.setItem("userList", JSON.stringify(array));
+}
+
+// Функция для загрузки данных из localStorage
+function FromLocalStorage() {
+  const userListJSON = localStorage.getItem("userList");
+  if (userListJSON) {
+    names = JSON.parse(userListJSON);
+    render(names);
+  }
+}
+
+// Вызываем функцию загрузки данных при загрузке страницы
+FromLocalStorage();
+
 // Добавление всего в форму и в root
 div_form.append(newName, newSalary, submit);
 document.body.prepend(div_form);
@@ -86,21 +102,38 @@ div_form.addEventListener("submit", (event) => {
   console.log(event.target);
   event.preventDefault(); // Запрещаем обновление страницы после отправки формы
 
-  const {name, salary} = event.target;
+  const { name, salary } = event.target;
 
   const newUser = {
     id: Date.now(),
     name: name.value,
-    image: 'https://picsum.photos/200',
-    salary: salary.value
+    image: "https://picsum.photos/200",
+    salary: salary.value,
   };
 
   // Добавление пользователя в массив
   names.push(newUser);
 
+  // Сохраняем данные в localStorage
+  saveLocalStorage(names);
   render(names);
-
 });
+
+
+// Функция для удаления пользователя из массива и обновления localStorage
+function deleteUser(userId) {
+  const user = names.findIndex((user) => user.id === userId);
+  if (user !== -1) {
+    names.splice(user, 1);
+
+    // Сохраняем обновленные данные в localStorage
+    saveLocalStorage(names);
+
+    // Вызываем функцию отображения
+    render(names);
+  }
+}
+
 
 // //Функция добавления нового пользователя в массив
 
@@ -144,12 +177,18 @@ function render(array) {
     // Добавление div_card в div_root
     div_root.append(div_card);
 
+    // Сохранение обновленных данных в localStorage
+    saveLocalStorage(names);
+
     // Добавление события удаления, при двойном нажатии на кнопку закрыть
     button_close.addEventListener("click", (event) => {
       alert(
         `Карточка пользователя ${event.target.id} была удалена из базы данных Пентагона`
       );
+      // Удаляем соответствующую карточку из DOM
       div_root.removeChild(div_card);
+      // Удаляем пользователя из массива и обновляем localStorage
+      deleteUser(element.id);
     });
   });
 }
