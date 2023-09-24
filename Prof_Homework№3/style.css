@@ -1,0 +1,76 @@
+/*Сброс стандартных стилей браузера */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; /* Ширина и высота включают в себя внутренние и внешние отсутпы*/
+}
+/* div_root*/
+.root {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+  gap: 20px;
+}
+
+/*Визуальное отображение div_card */
+.card {
+  background-color: rgb(192, 152, 152);
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 50px;
+}
+/* Размеры изображения */
+.img {
+  width: 350px;
+  height: 350px;
+  margin: 30px;
+}
+
+/* Изменение кнопки удаления*/
+.cross {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.div_info {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+p,
+h2 {
+  font-size: 40px;
+}
+/* Подчеркивание текста */
+h2 {
+  text-decoration: underline;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(160, 121, 128);
+  padding: 20px;
+  border-radius: 50px;
+}
+
+#input,
+.submit {
+  font-size: 20px;
+  height: 70px;
+  border-radius: 20px;
+}
+
+.submit {
+  background-color: green; 
+}
