@@ -10,3 +10,4 @@ Links:
 - [Homework№8](https://github.com/VladimirVornikov/Frontend_Homeworks/blob/main/Homework%E2%84%968/script.js)
 - [Prof_Homework№1](https://vladimirvornikov.github.io/Frontend_Homeworks/Prof_Homework%E2%84%961/index.html)
 - [Prof_Homework№2](https://github.com/VladimirVornikov/Frontend_Homeworks/blob/main/Prof_Homework%E2%84%962/script.js)
+- [Prof_Homework№3](https://github.com/VladimirVornikov/Frontend_Homeworks/blob/main/Prof_Homework%E2%84%963/script.js)
