@@ -69,41 +69,58 @@ const newName = document.createElement("input");
 newName.placeholder = "New user's name";
 newName.type = "text";
 newName.id = "input";
+newName.name = "name";
 
 const newSalary = document.createElement("input");
 newSalary.placeholder = "Which salary do they want to?";
 newSalary.type = "number";
 newSalary.id = "input";
+newSalary.name = "salary"
 
 const submit = document.createElement("button");
 submit.innerText = "Add new user";
 submit.className = "submit";
 submit.type = "submit";
-
 // Добавление всего в форму и в root
 div_form.append(newName, newSalary, submit);
-div_root.prepend(div_form);
+document.body.prepend(div_form);
 
-// //Функция добавления нового пользователя в массив
 div_form.addEventListener("submit", (event) => {
-//   event.preventDefault(); // запрещаем обновление страницы после отправки формы
-  const { name, salary } = event.target;
+  event.preventDefault(); // Запрещаем обновление страницы после отправки формы
+
+  const nameInput = document.querySelector('input[name="name"]');
+  const salaryInput = document.querySelector('input[name="salary"]');
+
+  // Валидация полей
+  const name = nameInput.value.trim();
+  const salary = parseFloat(salaryInput.value);
+
+  if (name === "" || isNaN(salary)) {
+    alert("Введите корректные данные.");
+    return;
+  }
 
   const new_user = {
     id: Date.now(),
-    name: name.value,
+    name: name,
     image: "https://picsum.photos/200",
-    salary: salary.value
+    salary: salary
   };
+
   // Добавление пользователя в массив
-  names.append(new_user);
+  names.push(new_user);
 
   render(names);
+
+  // Очистка инпутов
+  nameInput.value = "";
+  salaryInput.value = "";
 });
+
 
 // Написание функции, которая будет создавать блоки и теги из списка(массива)
 function render(array) {
-//   div_root.innerText = "";
+  div_root.innerText = "";
   array.forEach((element) => {
     // Создание блока карточки
     const div_card = document.createElement("div");
