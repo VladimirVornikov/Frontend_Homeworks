@@ -1,0 +1,54 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.div_root{
+    background-image: linear-gradient(145deg, #ee82ee, slateblue, #ffd86a, purple);
+}
+
+.div_cards{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 10px;
+}
+
+
+.card{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    width: 600px;
+    background-image: linear-gradient(#92009b 20%, #f5e944 90%, #00ffa2);
+    border-radius: 10%;
+
+}
+
+.card img{
+    height: 60%;
+    width: 70%;
+}
+
+.card:hover{
+    transition: 1s;
+    transform: scale(1.1)
+}
+
+h2{
+    text-decoration: underline;
+    font-size: 40px;
+}
+
+p{
+    text-decoration: line-through;
+    color: red;
+    font-size: 25px;
+}
+
+#discount{
+    text-decoration: none;
+    color: green;
+}
