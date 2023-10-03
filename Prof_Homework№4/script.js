@@ -34,12 +34,10 @@ function render(array){
       price_card_discount.innerText =`New price: ${price*0.75}$`
       price_card_discount.id = "discount"
       
-      const div_rating = createRating(); // Передаем значение рейтинга
+      const div_rating = createRating(); 
+
       card.append(img_element, h2_card, price_card, price_card_discount, div_rating)
-  
       div_cards.append(card);
-  
-      console.log(element);
     });
   }
 
@@ -48,11 +46,32 @@ function createRating() {
     div_rating.className = "rating";
     for (let i = 0; i < 5; i++) {
       const rating_item = document.createElement("div");
-      rating_item.className = "rating_item";
-      rating_item.innerText ="☆"; 
+      rating_item.id = `${i+1}`;
+      rating_item.innerText ="☆";
+      rating_item.addEventListener("click", clickRatingStar) 
       div_rating.append(rating_item);
+
     }
     return div_rating;
   }
 
-  
+
+  function clickRatingStar(event) {
+    console.log(event.currentTarget);
+    const clickedRating = event.currentTarget;
+    // Получаем значение оценки
+    const ratingValue = clickedRating.id;
+
+    // Получаем все элементы звезд
+    const allRatingItems = clickedRating.parentElement.children;
+
+    // Устанавливаем оценку для текущей звезды
+    for (let i = 0; i < ratingValue; i++) {
+        allRatingItems[i].innerText = "★";
+    }
+
+    // Сбрасываем оценку для оставшихся звезд
+    for (let i = ratingValue; i < allRatingItems.length; i++) {
+        allRatingItems[i].innerText = "☆";
+    }
+}
