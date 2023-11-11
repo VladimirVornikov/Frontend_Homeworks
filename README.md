@@ -13,3 +13,5 @@ Links:
 - [Prof_Homework№3](https://vladimirvornikov.github.io/Frontend_Homeworks/Prof_Homework%E2%84%963/index.html)
 - [Prof_Homework№4](https://vladimirvornikov.github.io/Frontend_Homeworks/Prof_Homework%E2%84%964/index.html)
   
+- [Prof_Homework№5](https://vladimirvornikov.github.io/Frontend_Homeworks/Prof_Homework%E2%84%965/script.js)
+  
