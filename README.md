@@ -19,4 +19,6 @@ Links:
   
 - [Prof_Homework№7](https://github.com/VladimirVornikov/Frontend_Homeworks/blob/main/Prof_Homework%E2%84%967/script.js)
   
+- [Prof_Homework№8](https://github.com/VladimirVornikov/Frontend_Homeworks/blob/main/Prof_Homework%E2%84%968/script.js)
+  
   
