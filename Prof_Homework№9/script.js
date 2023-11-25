@@ -164,17 +164,36 @@ function redForBar() {
     let currentRoundBtnMicro = document.querySelector(
         `.round_btnMicro[data-index="${sliderIndexMicro}"]`
     );
-    
+
     if (currentRoundBtnMicro) {
         currentRoundBtnMicro.style.backgroundColor = "red";
     }
+
+    // Define prevIndex
+    let prevIndex = sliderIndexMicro - 1 < 0 ? infoAboutArrayMicro.length - 1 : sliderIndexMicro - 1;
+
+    // Reset the style for the previous round button
+    let prevRoundBtnMicro = document.querySelector(
+        `.round_btnMicro[data-index="${prevIndex}"]`
+    );
+
+    if (prevRoundBtnMicro) {
+        prevRoundBtnMicro.style.backgroundColor = "white";
+    }
+
+    // Define nextIndex
+    let nextIndex = sliderIndexMicro + 1 >= infoAboutArrayMicro.length ? 0 : sliderIndexMicro + 1;
+
+    // Reset the style for the next round button
+    let nextRoundBtnMicro = document.querySelector(
+        `.round_btnMicro[data-index="${nextIndex}"]`
+    );
+
+    if (nextRoundBtnMicro) {
+        nextRoundBtnMicro.style.backgroundColor = "white";
+    }
 }
 redForBar()
-
-
-
-
-
 
 nextButtonMicro.onclick = () => {
     sliderIndexMicro++;
@@ -192,12 +211,52 @@ prevButtonMicro.onclick = () => {
         sliderIndexMicro = infoAboutArrayMicro.length - 1;
     }
     createElem()
+    redForBar()
 }
 
+// Slider for Avatar
 
 
+const infoAboutArrayAvatar = [
+    "./img/Ekaterina.png",
+    "./img/kolya.jpg",
+    "./img/MIhail.png",
+    "./img/Ulia.png"    
+];
 
+const infoAboutAvatar = document.querySelector(".commentsIMG");
+const nextButtonAvatar = document.querySelector(".sliderNex_btnAvatar");
+const prevButtonAvatar = document.querySelector(".sliderPrev_btnAvatar");
 
+let sliderIndexAvatar = 0;
+
+function createElemAvatar () {
+    infoAboutAvatar.innerHTML = ''
+    let IMGAvatar = document.createElement("img");
+    IMGAvatar.style.width = '340px'
+    IMGAvatar.style.height = '80px'
+    let urlAvatar = `${infoAboutArrayAvatar[sliderIndexAvatar]}`;
+    IMGAvatar.src = urlAvatar;
+    infoAboutAvatar.append(IMGAvatar)
+}
+createElemAvatar()
+
+nextButtonAvatar.onclick = () => {
+    sliderIndexAvatar++;
+    
+    if (sliderIndexAvatar > 3) {
+        sliderIndexAvatar = 0;
+    }
+    createElemAvatar()
+}
+
+prevButtonAvatar.onclick = () => {
+    sliderIndexAvatar--;
+    if (sliderIndexAvatar < 0) {
+        sliderIndexAvatar = infoAboutArrayAvatar.length - 1;
+    }
+    createElemAvatar()
+}
 
 
 

@@ -69,7 +69,7 @@ h1 {
 }
 
 
-.sliderPrev_btn, .sliderNex_btn, .sliderPrev_btnMicro, .sliderNex_btnMicro  {
+.sliderPrev_btn, .sliderNex_btn, .sliderPrev_btnMicro, .sliderNex_btnMicro, .sliderPrev_btnAvatar, .sliderNex_btnAvatar  {
     font-size: 20px;
     width:60px;
     height: 60px;
@@ -112,7 +112,7 @@ h1 {
     position: relative;
     top: 140px;
     left: 405px;
-    color: red;
+    color:  rgba(189, 189, 189, 1);
 }
 
 h2 {
@@ -219,7 +219,7 @@ h2 {
     color: white;
 }
 
-.slider_controlMicro {
+.slider_controlMicro, .slider_controlAvatar {
     position: relative;
     display: flex;
     top: 70px;
@@ -227,4 +227,136 @@ h2 {
     font-size: 48px;
     color: white;
     gap: 25px;
+}
+
+.reviews {
+    width: 1110px;
+    height: 620px;
+    position: absolute;
+    top: 3635px;
+    left: 405px;
+    
+}
+
+.comments {
+    background-color: rgba(235, 235, 235, 1);
+
+}
+
+.comments p{
+    font-size: 18px;
+    font-weight: 300;
+    margin: 45px 95px 58px 95px;
+}
+
+.commentsIMG {
+    margin-left: 95px;
+
+}
+
+
+.buttonNextPrevAvatar{
+    position: absolute;
+    right: 0px;
+    bottom: 100px;
+
+}
+.sliderPrev_btnAvatar:hover, .sliderNex_btnAvatar:hover {
+    background-color: blue;
+    color: white;
+}
+
+.contacts {
+    width: 1920px;
+    height: 623px;
+    background-image: url('./img/Rectangle.png');
+    position: absolute;
+    top: 4396px;
+    display: flex;
+    padding: 122px 405px 140px 407px;
+    color: white;
+    gap: 125px;
+
+}
+
+.mail {
+    display: flex;
+    gap: 40px;
+}
+
+.mail div {
+    display: flex;
+    gap: 15.5px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+#send {
+    width: 270px;
+    height: 60px;
+    background-color: blue;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    position: absolute;
+    top: 423px;
+    right: 405px;
+}
+
+footer {
+    height: 100px;
+    width: 1920px;
+    position: absolute;
+    top: 5020px;
+    font-size: 14px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.buttonInformation {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#Message {
+    margin-top: 30px;
+}
+
+#Message input{
+    width: 600px;
+    height: 100px;
+    background: none;
+    font-size: 21px;
+    font-weight: 300;
+}
+
+#NameSurname {
+    display: flex;
+    flex-direction: row;
+}
+
+
+#NameSurname div{
+    display: flex;
+    flex-direction: column;
+}
+#NameSurname div input{
+    font-size: 21px;
+    font-weight: 300;
+    font-family: 'Times New Roman', Times, serif;
+    width: 300px;
+    height: 40px;
+    background: none;
+}
+
+button {
+    cursor: pointer;
 }
