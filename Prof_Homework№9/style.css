@@ -13,6 +13,11 @@ header {
     margin: 33px 399px 43px 405px;
 }
 
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+}
 .BuhOne {
     width: 190px;
     height: 43px;
@@ -31,6 +36,7 @@ header {
     width: 1920px;
     height: 670px;
     position: absolute;
+    top: 120px;
 }
 
 h1 {
@@ -54,20 +60,161 @@ h1 {
     cursor: pointer;
 }
 
-.slider_control {
-    position: relative;
-    top: 120px;
-    left: 405px;
-    font-size: 48px;
-    color: white;
+
+.buttonNextPrev{
+    position: absolute;
+    right: 405px;
+    bottom: 180px;
+
 }
 
 
-
-.sliderPrev_btn, .sliderNex_btn {
+.sliderPrev_btn, .sliderNex_btn, .sliderPrev_btnMicro, .sliderNex_btnMicro  {
     font-size: 20px;
     width:60px;
     height: 60px;
     opacity: 0.3;
     cursor: pointer;
 } 
+
+
+.round_btn {
+    width: 10px;
+    height: 10px;
+    
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid black;
+}
+.slider_control, .slider_controlMicro {
+    position: relative;
+    display: flex;
+    top: 170px;
+    left: 405px;
+    font-size: 48px;
+    color: white;
+    gap: 25px;
+}
+
+
+.special {
+    width: 1920px;
+    height: 1242px;
+    position: relative;
+    top: 660px;
+    background-color:  rgba(235, 235, 235, 1);
+    ;
+}
+
+#special {
+    font-size: 24px;
+    font-weight: 900;
+    position: relative;
+    top: 140px;
+    left: 405px;
+    color: red;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 900;
+    position: relative;
+    top: 203px;
+    left: 405px;
+}
+.block {
+    position: relative;
+    left: 405px;
+    top: 352px;
+    width: 1110px;
+    height: 730px;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+}
+
+.IMG {
+
+    width: 350px;
+    height: 350px;
+    color: white;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.IMG:hover {
+    filter: saturate(4);
+}
+
+.paragraph {
+    position: relative;
+    top: 261px;
+    left: 45px;
+}
+
+.about_us {
+    width: 1110px;
+    height: 564px;
+    position: absolute;
+    top: 2105px;
+    left: 405px;
+    display: flex;
+    flex-direction: row;
+}
+
+#info1 {
+    width: 445px;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+}
+
+#info2 {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 30px;
+}
+
+.blockInfo {
+    background-color: rgba(235, 235, 235, 1);
+    width: 255px;
+    height: 255px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.blockInfo:hover {
+    background-color: blue;
+    color: white;
+}
+.blockInfo:hover a {
+    color: white;
+}
+
+.withUs {
+    width: 1920px;
+    height: 630px;
+    background-color: rgba(235, 235, 235, 1);
+    position: absolute;
+    top: 2866px;
+}
+
+.microsoft {
+    margin-top: 80px;
+    margin-left: 405px;
+    display: flex;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.buttonNextPrevMicro{
+    position: absolute;
+    right: 405px;
+    bottom: 100px;
+
+}
+.sliderPrev_btnMicro:hover, .sliderNex_btnMicro:hover {
+    background-color: blue;
+    color: white;
+}

@@ -1,34 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Figma</title>
-</head>
-<body>
-    <header>
-        <img src="./img/BuhOne.png" class="BuhOne" alt="Not found">
-        <nav class="info">
-            <p>ГЛАВНАЯ</p>
-            <p>УСЛУГИ</p>
-            <p>КЕЙСЫ</p>
-            <p>О КОМПАНИИ</p>
-            <p>КОНТАКТЫ</p>
-        </nav>
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Figma</title>
+    </head>
+    <body>
+        <header>
+            <img src="./img/logo.png" class="logo" alt="" />
+            <img src="./img/BuhOne.png" class="BuhOne" alt="Not found" />
+            <nav class="info">
+                <a href="">ГЛАВНАЯ</a>
+                <a href="">УСЛУГИ</a>
+                <a href="">КЕЙСЫ</a>
+                <a href="">О КОМПАНИИ</a>
+                <a href="">КОНТАКТЫ</a>
+            </nav>
+        </header>
 
-    <main>
-        <div class="slider">
-            <h1>Бухгалтерские услуги<br>в вашем городе</h1>
-            <button class="screen_btn">Наша презентация</button>
-            <div class="slider_control">0000</div>
-            <div class="buttonNexPrev">
-                <button class="sliderPrev_btn"><</button>
-                <button class="sliderNex_btn">></button>
+        <main>
+            <div class="slider">
+                <div class="info_about">
+                    <button class="screen_btn">Наша презентация</button>
+                </div>
+                <div class="slider_control"></div>
+                <div class="buttonNextPrev">
+                    <button class="sliderPrev_btn"><</button>
+                    <button class="sliderNex_btn">></button>
+                </div>
             </div>
-        </div>
-    </main>
-    <script src="./script.js"></script>
-</body>
+
+            <div class="special">
+                <p id="special">Наши услуги</p>
+                <h2>Мы специализируемся</h2>
+                <div class="block"></div>
+            </div>
+
+            <section class="about_us">
+                <div id="info1">
+                    <p style="font-size: 24px; color: rgba(189, 189, 189, 1); margin-bottom: 40px;">О нас</p>
+                    <h3 style="font-size: 48px;">Компания <h3>
+                    <h3 style="font-size: 48px; color: aqua; margin-bottom: 60px;"> ИвановПром</h3>
+                    <p style="font-size: 18px; font-weight: 300; margin-right: 125px;">
+                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+                    </p>
+                </div>
+                <div id="info2">
+
+                </div>
+            </section>
+
+            <section class="withUs">
+                <p style="font-size: 24px; font-weight: 900; margin-top: 100px; margin-left: 405px; color: rgba(189, 189, 189, 1);
+                ;">Наши клиенты</p>
+                <h3 style="font-size: 48px; font-weight: 900; margin-top: 40px; margin-left: 405px;" >С нам работают</h3>
+                <div class="microsoft"></div>
+                <div class="slider_controlMicro"></div>
+                <div class="buttonNextPrevMicro">
+                    <button class="sliderPrev_btnMicro"><</button>
+                    <button class="sliderNex_btnMicro">></button>
+                </div>
+            </section>
+        </main>
+        <script src="./script.js"></script>
+    </body>
 </html>
