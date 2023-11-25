@@ -1,6 +1,5 @@
 
 
-
 const infoAboutArray = [
     `Бухгалтерские услуги 
 в вашем городе`,
@@ -122,19 +121,78 @@ for (let i = 1; i < 5; i++) {
 
 }
 
-const micro = document.querySelector('.microsoft');
+// Slaider for Logo 
 
-for (let i =0; i < 4; i++) {
-    let imgMicro = document.createElement('img')
-    imgMicro.style.backgroundImage = "url('./img/Microsoft.png')";
-    imgMicro.style.width = '255px'
-    imgMicro.style.height = '130px'
-    micro.append(imgMicro)
-    
+
+const infoAboutArrayMicro = [
+    "./img/Microsoft.png",
+    "./img/apple.png",
+    "./img/intel.png",
+    "./img/github.png"    
+];
+
+const infoAboutMicro = document.querySelector(".info_about_microsoft");
+const nextButtonMicro = document.querySelector(".sliderNex_btnMicro");
+const prevButtonMicro = document.querySelector(".sliderPrev_btnMicro");
+
+let sliderIndexMicro = 0;
+
+function createElem () {
+    infoAboutMicro.innerHTML = ''
+    for (let i =0; i < 4; i++) {
+            let IMGMicro = document.createElement("img");
+            let urlMicro = `${infoAboutArrayMicro[sliderIndexMicro]}`;
+            IMGMicro.src = urlMicro;
+            IMGMicro.style.width = '255px'
+            IMGMicro.style.height = '130px'
+            infoAboutMicro.append(IMGMicro)
+            
+    }
+}
+createElem()
+
+// Create table 
+const slider_btnMicro = document.querySelector(".slider_controlMicro");
+for (let i = 0; i < infoAboutArrayMicro.length; i++) {
+    const round_btn = document.createElement("div");
+    round_btn.className = "round_btnMicro";
+    round_btn.dataset.index = i;
+    slider_btnMicro.append(round_btn);
 }
 
+function redForBar() {
+    let currentRoundBtnMicro = document.querySelector(
+        `.round_btnMicro[data-index="${sliderIndexMicro}"]`
+    );
+    
+    if (currentRoundBtnMicro) {
+        currentRoundBtnMicro.style.backgroundColor = "red";
+    }
+}
+redForBar()
 
 
+
+
+
+
+nextButtonMicro.onclick = () => {
+    sliderIndexMicro++;
+    
+    if (sliderIndexMicro > 3) {
+        sliderIndexMicro = 0;
+    }
+    createElem()
+    redForBar()
+}
+
+prevButtonMicro.onclick = () => {
+    sliderIndexMicro--;
+    if (sliderIndexMicro < 0) {
+        sliderIndexMicro = infoAboutArrayMicro.length - 1;
+    }
+    createElem()
+}
 
 
 

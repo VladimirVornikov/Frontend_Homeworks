@@ -78,7 +78,7 @@ h1 {
 } 
 
 
-.round_btn {
+.round_btn, .round_btnMicro {
     width: 10px;
     height: 10px;
     
@@ -86,7 +86,7 @@ h1 {
     background-color: white;
     border: 1px solid black;
 }
-.slider_control, .slider_controlMicro {
+.slider_control {
     position: relative;
     display: flex;
     top: 170px;
@@ -200,7 +200,7 @@ h2 {
     top: 2866px;
 }
 
-.microsoft {
+.info_about_microsoft {
     margin-top: 80px;
     margin-left: 405px;
     display: flex;
@@ -217,4 +217,14 @@ h2 {
 .sliderPrev_btnMicro:hover, .sliderNex_btnMicro:hover {
     background-color: blue;
     color: white;
+}
+
+.slider_controlMicro {
+    position: relative;
+    display: flex;
+    top: 70px;
+    left: 405px;
+    font-size: 48px;
+    color: white;
+    gap: 25px;
 }
