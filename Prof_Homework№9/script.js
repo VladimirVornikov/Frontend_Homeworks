@@ -259,6 +259,16 @@ prevButtonAvatar.onclick = () => {
 }
 
 
+const buttonMessage = document.querySelector('form')
+
+buttonMessage.addEventListener("submit", (message) => {
+    console.log(message.target);
+    message.preventDefault();
+
+    
+    const { name, surname } = message.target;
+    console.log(name.value, surname.value);
+})
 
 
 
