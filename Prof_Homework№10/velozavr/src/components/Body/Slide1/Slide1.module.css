@@ -1,0 +1,32 @@
+.Slide1 {
+    height: 687px;
+    grid-column: 1/7;
+    background-color: rgba(244, 249, 226, 1);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+h1 {
+    width: 610px;
+    height: 90px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 48px;
+    color: rgba(34, 53, 111, 1);
+    margin: 109px 51px 46px 179px;
+}
+.info_text {
+    width: 602px;
+    height: 277px;
+    font-weight: 400;
+    font-size: 24px;
+    color: rgba(34, 53, 111, 1);
+    margin-bottom: 165px;
+    margin-right: 51px;
+    margin-left: 187px;
+    line-height: 42.55px;
+}
+.dino {
+    margin-top: 68px;
+    margin-right: 57px;
+}

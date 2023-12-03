@@ -1,0 +1,33 @@
+.Slide2 {
+    height: 607px;
+    grid-column: 1/7;
+    background-color: rgba(98, 208, 223, 1);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+h2 {
+    width: 361px;
+    height: 51px;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 36px;
+    line-height: 27px;
+    color: rgba(255, 255, 255, 1);
+    margin: 131px 378px 27px 178px;
+}
+.info_text {
+    width: 586px;
+    height: 270px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 36px;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 1);
+    margin-right: 160px;
+    margin-bottom: 127px;
+    margin-left: 171px;
+}
+.foto1 {
+    height: 607px;
+}
