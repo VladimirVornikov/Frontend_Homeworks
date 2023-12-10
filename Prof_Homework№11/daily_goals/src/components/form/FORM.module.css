@@ -1,0 +1,48 @@
+form {
+    width: 1088px;
+    height: 179px;
+
+    margin-top: 79px;
+    margin-left: 82px;
+    border-radius: 20px;
+
+    background-color: rgba(236, 240, 241, 1);
+    display: flex;
+
+}
+
+button {
+    width: 155px;
+    height: 31px;
+    margin-top: 108px;
+    margin-right: 63px;
+
+    cursor: pointer;
+    border-radius: 23px;
+    font-size: 20px;
+    box-align: center;
+    font-weight: 400;
+    color: white;
+    background-color: rgba(26, 188, 156, 1);
+}
+
+input {
+    width: 544px;
+    height: 45px;
+    margin-top: 24px;
+    margin-left: 62px;
+}
+
+select{
+    width: 253px;
+    height: 45px;
+    margin-top: 32px;
+    margin-left: 34px;
+
+}
+
+select:first-child{
+    margin-left: 62px;
+}
+
+

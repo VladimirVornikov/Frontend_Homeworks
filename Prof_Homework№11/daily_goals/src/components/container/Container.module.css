@@ -1,0 +1,33 @@
+.divTasks {
+    margin-top: 43px;
+    width: 1088px;
+    height: 70px;
+    border-radius: 20px;
+    background-color: red;
+    margin-left: 82px;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+} 
+
+
+.day {
+    width: 80px;
+    height: 100%;
+    background-color: rgba(52, 73, 94, 1);
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    /* display: flex; */
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.task {
+    background-color: green;
+    width: 286px;
+    height: 47px;
+
+}
