@@ -3,7 +3,7 @@ import style from "./FORM.module.css";
 
 export default function FORM(props) {
 
-    const { updateFormData} = props
+    const { takeDataFromForm} = props
 
     const handlerOfSelect = (event) => {
         event.preventDefault();
@@ -12,11 +12,12 @@ export default function FORM(props) {
 
         const formData = {
             day: days.value,
-            importance: importance.value,
-            information: information.value,
+            priority: importance.value = "important" ? 1 : 0,
+            goal: information.value,
         };
+        
 
-        updateFormData(formData)
+        takeDataFromForm(formData)
 
 
     };
@@ -38,8 +39,7 @@ export default function FORM(props) {
                     <select name="importance" id="importance">
                         <option value="">Выберите важность</option>
                         <option value="low">Низкая</option>
-                        <option value="middle">Средняя</option>
-                        <option value="important">Важная</option>
+                        <option value="important">Высокая</option>
                     </select>
                     <input
                         name="information"

@@ -1,13 +1,28 @@
-.divTasks {
+.divTasksFor70px {
     margin-top: 43px;
     width: 1088px;
     height: 70px;
     border-radius: 20px;
-    background-color: red;
+    background-color: white;
     margin-left: 82px;
     display: flex;
     align-items: center;
     gap: 17px;
+    position: relative;
+} 
+.divTasksFor140px {
+    margin-top: 43px;
+    width: 1088px;
+    height: 140px;
+    border-radius: 20px;
+    background-color: white;
+    margin-left: 82px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+    justify-items: center;
+    align-items: center;
+    position: relative;
 } 
 
 
@@ -16,11 +31,12 @@
     height: 100%;
     background-color: rgba(52, 73, 94, 1);
     color: white;
-    font-size: 24px;
+    font-size: 19px;
     font-weight: 400;
     text-align: center;
-    /* display: flex; */
+    display: flex;
     align-items: center;
+    justify-content: center;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -29,5 +45,39 @@
     background-color: green;
     width: 286px;
     height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
+}
+.tasksContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+    justify-items: center;
+    align-items: center;
+}
+
+.cross, .crossDiv{
+    position: absolute;
+    visibility: hidden;
+    right: -10px;
+    top: -10px;
+    background-color: rgb(216, 13, 13);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.task:hover .cross {
+    visibility: visible;
+}
+
+.divTasksFor140px:hover .crossDiv, .divTasksFor70px:hover .crossDiv{
+    visibility: visible;
 }
