@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 export default function Data({ updateFormData, dataForm }) {
-    const days = [
+    let days = [
         {
             name: "Monday",
             goals: [
@@ -28,9 +28,10 @@ export default function Data({ updateFormData, dataForm }) {
 
     const { day, goal, priority } = dataForm;
 
+
     useEffect(() => {
         // Find the day in the array and add a new goal to its goals
-        const updatedDays = days.map((elem) => {
+        let updatedDays = days.map((elem) => {
             if (elem.name === day) {
                 return {
                     ...elem,
